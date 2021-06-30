@@ -1,0 +1,46 @@
+.sec-contact-bg {
+    height: fit-content;
+    background: linear-gradient(rgba(0, 8, 20, 0.75), rgba(0, 8, 20, 0.75)), url(./assets/Background/bg8.png) no-repeat center center;
+}
+
+.sec-contact {
+    padding: 5vh 0;
+    text-align: center;
+}
+
+.center {
+    margin: 15vh auto;
+}
+
+.contact-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-form input,
+textarea {
+    background: #030B16;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+.contact-form label {
+    margin: 0 1rem;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.contact-form button {
+    margin: 1rem auto;
+    background: #F7C92F;
+    color: #030B16;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 50%;
+    font-size: 1.4rem;
+}

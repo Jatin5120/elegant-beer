@@ -1,0 +1,121 @@
+.sec-1-bg {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 8, 20, 0.75), rgba(0, 8, 20, 0.75)), url(./assets/Background/bg1.png) no-repeat center center;
+}
+
+.sec-1 {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    padding: 25vh 10vw;
+}
+
+.hero {
+    margin: auto;
+    width: 50vw;
+    text-align: center;
+}
+
+.hero-text {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: center;
+    /* letter-spacing: 0.1em; */
+}
+
+.timing {
+    margin: 0 10vw;
+    font-size: 1.2rem;
+}
+
+.cta {
+    margin: 3rem;
+    padding: 1rem;
+    width: 20vw;
+    font-size: 2rem;
+    border: none;
+    background-color: #e51b23;
+}
+
+.sec-2-bg {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 8, 20, 0.75), rgba(0, 8, 20, 0.75)), url(./assets/Background/bg2.png) no-repeat center center;
+}
+
+.sec-2 {
+    padding: 5vh 0;
+    text-align: center;
+}
+
+.details-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+}
+
+.place-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.item {
+    flex: 0 0 auto;
+    margin: 3rem;
+    border-radius: 3rem;
+    box-shadow: #000814;
+}
+
+.item:hover {
+    transform: translate(-10px, -10px);
+    transition: 0.3s;
+}
+
+.sec-3-bg {
+    height: fit-content;
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 8, 20, 0.75), rgba(0, 8, 20, 0.75)), url(./assets/Background/bg3.png) no-repeat center center;
+}
+
+.sec-3 {
+    padding: 2vh 0;
+    text-align: center;
+}
+
+.testimonials {
+    margin: 3rem;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-card {
+    text-align: left;
+    width: 15vw;
+}
+
+.photo {
+    margin: 0 1rem 0 0;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+}
+.photo img {
+    width: 70px;
+    height: 70px;
+
+    }
+.star {
+    color: #f7c92f;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/common.css" />
+    <link rel="stylesheet" href="../static/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Contact</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="/">
+            <img class="navbar-brand" src={{url_for( 'static', filename='assets/Logos/Text_Logo.png' )}} />
+        </a>
+        <div style="width: 57vw"></div>
+        <div class="nav-link-box">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/menu" class="nav-link">Menu</a>
+            <a href="/contact" class="nav-link active">Contact</a>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <div class="sec-contact-bg">
+        <div class="sec-contact">
+            <div class="center">
+
+                <img style="height: 10vh; width: 10vw; margin: 5rem auto; text-align: center" src={{url_for( 'static', filename='assets/Logos/Logo_Name.png' )}} />
+                <form class="contact-form" action="">
+                    <label for="title">Title</label>
+                    <input type="text" style=" color: #E5E5E5;" name="title" id="title" placeholder="Message title..">
+                    <label for="msg">Message</label>
+                    <Textarea name="msg" style="height: 5rem; color: #E5E5E5;" placeholder="Your Feedback/Message...."></Textarea>
+                    <button type="submit">Contact Us</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer ">
+        <div class="hero-img ">
+            <img style="height: 20vh " src={{url_for( 'static', filename='assets/Logos/Logo_Name.png' )}}/>
+            <div class="col ">
+                <div class="row ">
+                    <p>Mon - Fri</p>
+                    <p>6 pm - 12 am</p>
+                </div>
+                <div class="row ">
+                    <p>Sat - Sun</p>
+                    <p>5 pm - 1 am</p>
+                </div>
+            </div>
+        </div>
+        <div class="col ">
+            <p style="font-size: 1.5rem; margin: 1rem 0 ">Contact us at</p>
+            <p>
+                <i class="fa fa-phone " aria-hidden="true "></i> +91 814 688 8976
+            </p>
+            <p>
+                <i class="fa fa-whatsapp " aria-hidden="true "></i> +91 964 622 7197
+            </p>
+            <p>
+                <i class="fa fa-envelope-o " aria-hidden="true "></i> contact@elegantbeer.com
+            </p>
+            <p>
+                <i class="fa fa-map-marker " aria-hidden="true "></i> The Elegant Beer Bar,<br /> Street 20, Model Town,<br /> Jalandhar, Punjab <br /> 144003
+            </p>
+        </div>
+        <div class="col " style="vertical-align: top; padding-bottom: 3.2rem ">
+            <p style="font-size: 1.5rem; margin: 1rem 0 ">Links</p>
+            <a href={{url_for('home')}} class="nav-link " style="margin: 0.5rem 0 ">Home</a>
+            <a href={{url_for('menu')}} class="nav-link " style="margin: 0.5rem 0 ">Menu</a>
+            <a href={{url_for('about')}} class="nav-link " style="margin: 0.5rem 0 ">About</a>
+            <a href={{url_for('contact')}} class="nav-link " style="margin: 0.5rem 0 ">Contact</a>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13635.495235588649!2d75.56778813867822!3d31.307232736403783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5bac8d0a5b81%3A0x1066ccb005822551!2sModel%20Town%2C%20Jalandhar%2C%20Punjab%20144003!5e0!3m2!1sen!2sin!4v1624213998645!5m2!1sen!2sin "
+            width="400 " height="300 " style="border: 0; align-self: center " allowfullscreen=" " loading="lazy "></iframe>
+    </div>
+</body>
+
+</html>

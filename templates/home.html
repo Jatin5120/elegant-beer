@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/home.css" />
+    <link rel="stylesheet" href="../static/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar">
+        <a href="/">
+            <img class="navbar-brand" src={{url_for( 'static', filename='assets/Logos/Text_Logo.png' )}} />
+        </a>
+        <div style="width: 57vw"></div>
+        <div class="nav-link-box">
+            <a href="/" class="nav-link active">Home</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/menu" class="nav-link">Menu</a>
+            <a href="/contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!--Section 1 ============= Hero ============== -->
+
+    <div class="sec-1-bg">
+        <div class="sec-1">
+            <div class="hero hero-img">
+                <img style="height: 33vh" src={{url_for( 'static', filename='assets/Logos/Logo_Name.png' )}} />
+                <div class="col timing">
+                    <div class="row">
+                        <p>Mon - Fri</p>
+                        <p>6 pm - 12 am</p>
+                    </div>
+                    <div class="row">
+                        <p>Sat - Sun</p>
+                        <p>5 pm - 1 am</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero">
+                <p class="hero-text">
+                    We Aim to offer you <br /> the Best Beer <br />Experience possible.
+                </p>
+                <a href="/menu">
+                    <button class="cta">Buy Drink</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Section 2 ============= About ============== -->
+
+    <div class="sec-2-bg">
+        <div class="sec-2">
+            <p class="head-line">About the Place</p>
+            <p class="para">
+                The ELEGANT BEER BAR started as a craft beer store founded by Riya and Karan Mehta in 2013. We recently opened our taproom expansion in 2017, to offer a unique selection of draft beers from around the world and share our passion with our patrons. Providing
+                beer education is a core mission of The ELEGANT BEER BAR.
+            </p>
+            <a href="/about">
+                <button class="details-btn">More Details</button>
+            </a>
+            <div class="place-carousel">
+                <span class="item" style="width: 3rem"></span> {% for i in range(1, 7) %} <img src={{url_for( 'static', filename='assets/Drinking place/image{0}.jpg' .format(i))}} alt="place {{i}}" class="item" /> {% endfor %}
+                <span class="item" style="width: 3rem"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Section 3 ============= Testimonials ============== -->
+
+    <div class="sec-3-bg">
+        <div class="sec-3">
+            <p class="head-line">Testimonials</p>
+            <div class="testimonials">
+                {% for testimonial in testimonials %}
+                <div class="testimonial-card card">
+                    <div class="col">
+                        <div style="display: flex">
+                            <div class="photo">
+                                <img src={{url_for( 'static', filename= testimonial['imageUrl'] )}} alt={{testimonial['name']}}>
+                            </div>
+                            <div class="col">
+                                <p style="font-size: 1.5rem">
+                                    {{testimonial['name']}}
+                                </p>
+                                <p>
+                                    <span>
+											{% for num in
+											range(testimonial['rating']) %}
+											<i
+												class="fa star fa-star"
+												aria-hidden="true"
+											></i>
+											{% endfor %} {% for i in range(5 -
+											testimonial['rating']) %}
+											<i
+												class="fa star fa-star-o"
+												aria-hidden="true"
+											></i>
+											{% endfor %}
+										</span>
+                                </p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 2rem; font-size: 1.2rem">
+                            {{testimonial['review']}}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!--Section 2 ============= About ============== -->
+
+    <div class="footer">
+        <div class="hero-img">
+            <img style="height: 20vh" src={{url_for( 'static', filename='assets/Logos/Logo_Name.png' )}}/>
+            <div class="col">
+                <div class="row">
+                    <p>Mon - Fri</p>
+                    <p>6 pm - 12 am</p>
+                </div>
+                <div class="row">
+                    <p>Sat - Sun</p>
+                    <p>5 pm - 1 am</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <p style="font-size: 1.5rem; margin: 1rem 0">Contact us at</p>
+            <p>
+                <i class="fa fa-phone" aria-hidden="true"></i> +91 814 688 8976
+            </p>
+            <p>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i> +91 964 622 7197
+            </p>
+            <p>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> contact@elegantbeer.com
+            </p>
+            <p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> The Elegant Beer Bar,<br /> Street 20, Model Town,<br /> Jalandhar, Punjab <br /> 144003
+            </p>
+        </div>
+        <div class="col" style="vertical-align: top; padding-bottom: 3.2rem">
+            <p style="font-size: 1.5rem; margin: 1rem 0">Links</p>
+            <a href={{url_for('home')}} class="nav-link" style="margin: 0.5rem 0">Home</a>
+            <a href={{url_for('menu')}} class="nav-link" style="margin: 0.5rem 0">Menu</a>
+            <a href={{url_for('about')}} class="nav-link" style="margin: 0.5rem 0">About</a>
+            <a href={{url_for('contact')}} class="nav-link" style="margin: 0.5rem 0">Contact</a>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13635.495235588649!2d75.56778813867822!3d31.307232736403783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5bac8d0a5b81%3A0x1066ccb005822551!2sModel%20Town%2C%20Jalandhar%2C%20Punjab%20144003!5e0!3m2!1sen!2sin!4v1624213998645!5m2!1sen!2sin"
+            width="400" height="300" style="border: 0; align-self: center" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</body>
+
+</html>

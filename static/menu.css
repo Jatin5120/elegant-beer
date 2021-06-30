@@ -1,0 +1,109 @@
+    .sec-menu-bg {
+        height: fit-content;
+        min-height: 100vh;
+        width: 100vw;
+        background: linear-gradient(rgba(0, 8, 20, 0.75), rgba(0, 8, 20, 0.75)), url(./assets/Background/bg4.png) no-repeat center center fixed;
+    }
+    
+    .sec-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 25vh 5vw;
+        overflow: scroll;
+    }
+    
+    .sec-order-bg {
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(rgba(0, 8, 20, 0.75), rgba(0, 8, 20, 0.75)), url(./assets/Background/bg6.png) no-repeat center center;
+    }
+    
+    .sec-order {
+        text-align: center;
+        padding: 25vh 10vw;
+    }
+    
+    .sec-order h2 {
+        margin: 1rem 0;
+    }
+    
+    .sec-order h3 {
+        margin: 2rem 0;
+    }
+    
+    .order-form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .inp-field {
+        background: #030B16;
+        border: none;
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        width: 100%;
+        color: #E5E5E5;
+    }
+    
+    input[type="radio"] {
+        margin: 0 .5rem;
+        align-self: center;
+    }
+    
+    .order-label {
+        margin: 0 1rem;
+        text-align: left;
+        font-size: 1.4rem;
+    }
+    
+    .order-form button {
+        margin: 1rem auto;
+        background: #F7C92F;
+        color: #030B16;
+        border-radius: 20px;
+        padding: 1rem;
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    
+    .beer-card {
+        margin: 2rem;
+        display: flex;
+        border-radius: 2rem;
+        background-color: #030b16;
+        color: #ffffff;
+        text-align: left;
+        box-shadow: 1.5rem 1.5rem 3rem rgba(0, 0, 0, 0.75);
+    }
+    
+    .img-cont {
+        text-align: center;
+        border-radius: 2rem;
+        /* background-color: #F7C92F; */
+        /* padding: 1rem 0; */
+    }
+    
+    .img-cont img {
+        border-radius: 1.8rem;
+        height: 15rem;
+        /* width: 15rem; */
+    }
+    
+    .beer-details {
+        padding: 2rem 2rem;
+    }
+    
+    .big-font {
+        font-size: 1.3rem;
+    }
+    
+    .small-font {
+        font-size: 0.8rem;
+    }
